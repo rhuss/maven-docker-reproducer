@@ -32,7 +32,7 @@
                                 <from>busybox</from>
 
                                 <assembly>
-                                    <mode>dir</mode>
+                                    <mode>tar</mode>
                                     <descriptor>assembly.xml</descriptor>
                                 </assembly>
                                 <workdir>/maven</workdir>
