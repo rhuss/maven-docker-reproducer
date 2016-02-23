@@ -11,6 +11,15 @@
                 <include>hello.sh</include>
             </includes>
             <lineEnding>unix</lineEnding>
+            <!-- Line ending conversion in Maven happens only when filtered = true.
+                 This is a bug in the Maven Assembly Plugin 2.5.1, which is fixed in 2.6
+                 The next version of d-m-p (probably 0.15.0) will upgrade to the fixed Maven Assembly Plugin
+
+                 In the meantime the following workaround will do it on Windows:
+                 
+                 * use a <mode>tar</mode> in <assembly> config of d-m-p
+                 * use <lineEnding>unix</lineEnding> and <filtered>true</filtered> in assembly descriptor -->
+            <filtered>true</filtered>
         </fileSet>
     </fileSets>
 </assembly>
